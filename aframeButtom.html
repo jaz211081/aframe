@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="/aframeMyJS.js"></script>
+    <title>Env</title>
+</head>
+
+<body>
+    <div id="my-vr-container">
+        <a-scene>
+            <a-sky src="images/PXL_20240129_004354364.PHOTOSPHERE.jpg"> </a-sky>
+            <a-entity camera look-controls> </a-entity> <!-- 固定相機位置，刪除此行相機可以WASD移動 -->
+            <a-entity cursor="rayOrigin:mouse"></a-entity>
+            <a-text font="kelsonsans" value="aaaaa工務部222" width="3" position=".4 .1 1.8" rotation="0 190 0" ></a-text>
+            <a-box Btn_ToGoogle position="0 0.15 1.7" depth="0.1" height="0.2" width="0.1" onclick="changePosition('#verte')"></a-box>
+        </a-scene>    
+    </div>
+    
+</body>
+
+</html>
+

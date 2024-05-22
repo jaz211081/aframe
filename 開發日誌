@@ -1,0 +1,13 @@
+2024.05.20 : 
+    aframeButtom.html: 
+        1.可以放置字體，但繁體中文無法呈現，須找個方法來實現。
+        2.需要點選後超連結到網站，仍待實現。
+        3.物件點擊互動: https://codepen.io/VinZ83F/pen/PoaELVG
+
+
+    aframe.test2: 嘗試在畫面中新增按鈕，但在全螢幕模式會不見。因此想嘗試加入 aframe 元素來當按鈕使用。在此基礎之上新增aframeButtom.html文件。
+    後來發現因為侷限了 div 的視窗大小而導致這問題，但仍持續開發aframe按鈕
+
+    
+    vrTest.html為基礎天空盒。在此基礎之上新增aframe.test2.html文件。
+
