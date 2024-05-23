@@ -1,20 +1,23 @@
-function ToLink(){
-    
-}
+AFRAME.registerComponent('btngoogle', {
+  init: function() {
+    this.el.addEventListener('click', (e) => {
+      window.open('https://google.com');
+    })
+  }
+})
+  
+AFRAME.registerComponent('btnxc', {
+    init: function() {
+      this.el.addEventListener('click', (e) => {
+          window.open('https://xinchuang27442943.github.io/CompanyWebPage/');
+    })
+  }
+})
 
-
-AFRAME.registerComponent('code-that-does-this', {
-    init: function () {
-      // Code here.
-      console.log(this.el);
-    }
-  });
-
-  AFRAME.registerComponent('Btn_ToGoogle', {
-    init: function () {
-        this.el.addEventListener('click', () => {
-            window.location.href = 'https://www.google.com/';
-          });
-          console.log(this.el);
-        }
-      });
+AFRAME.registerComponent('btnhan', {
+  init: function() {
+    this.el.addEventListener('click', (e) => {
+      window.open('https://mrhan.mystrikingly.com/');
+    })
+  }
+})

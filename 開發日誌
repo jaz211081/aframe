@@ -6,7 +6,7 @@
 
 
     aframe.test2: 嘗試在畫面中新增按鈕，但在全螢幕模式會不見。因此想嘗試加入 aframe 元素來當按鈕使用。在此基礎之上新增aframeButtom.html文件。
-    後來發現因為侷限了 div 的視窗大小而導致這問題，但仍持續開發aframe按鈕
+    後來發現因為侷限了 div 的視窗大小而導致多一個全螢幕UI遮擋畫面，雖然解決UI遮擋畫面的問題，但仍會持續開發aframe按鈕。畢竟aframe按鈕之存在是往後互動的必需物件。
 
     
     vrTest.html為基礎天空盒。在此基礎之上新增aframe.test2.html文件。
