@@ -1,7 +1,12 @@
+2024.05.28
+    在aframeButtom.html可以連結到網站後，接下來要更進一步，在當前頁面開啟小視窗。因此開新的檔案 addPanel.html來嘗試與A-FRAME的Responsive UI結合看看
+    (https://aframe.io/examples/showcase/responsiveui/)
+
+
 2024.05.20 : 
     aframeButtom.html: 
         1.可以放置字體，但繁體中文無法呈現，須找個方法來實現。
-        2.需要點選後超連結到網站，仍待實現。
+        2.需要點選後超連結到網站，已實現。
         3.物件點擊互動: https://codepen.io/VinZ83F/pen/PoaELVG
 
 

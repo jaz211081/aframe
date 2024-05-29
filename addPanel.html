@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="aframeMyJS.js"></script>
+    <link rel="stylesheet" href="aframeMyCSS.CSS">
+    <title>Env</title>
+</head>
+
+<body>
+    <div class="info-window" id="infoWindow">
+        <button class="close-button" onclick="closeWindow()">X</button>
+        <div id="infoContent">這是資訊面板</div>
+    </div>
+
+    <a-scene>
+        <a-assets>
+            <img id="teamPic" src="images/txtpic/Team_Administrative.jpg">
+            <a-asset-item id="messageText" src="message1.html"></a-asset-item>
+        </a-assets>
+
+        <a-sky src="images/PXL_20240129_004354364.PHOTOSPHERE.jpg"></a-sky>
+        <a-entity camera look-controls></a-entity> <!-- 固定相機位置，刪除此行相機可以WASD移動 -->
+        <a-entity cursor="rayOrigin:mouse"></a-entity>
+
+        <!-- 物件 -->
+        <a-image src="images/txtpic/gwsave.jpg" position="0.1 .13 1.8" width="0.3" height="0.1" rotation="0 180 0" click-show-window data-file="gwsave.html"></a-image>
+        <a-image src="images/txtpic/BulletinBoard.jpg" position="1 0.12 0.5" width="0.2" height="0.08" rotation="0 220 0"></a-image>   
+ 
+        <!-- 組別 -->
+        <a-image src="#teamPic" position="0.8 0 1.15" width="0.22" height="0.1" rotation="0 210 0" click-show-window data-file="message1.html"></a-image>
+        <a-image src="images/txtpic/Team_Env.jpg" position="0.52 -.15 1.15" width="0.22" height="0.1" rotation="0 200 0" click-show-window data-file="message2.html"></a-image>
+        <a-image src="images/txtpic/Team_Design.jpg" position="0.15 -.15 1.2" width="0.25" height="0.1" rotation="0 180 0" click-show-window data-file="message3.html"></a-image>
+        <a-image src="images/txtpic/Team_Plan.jpg" position="-.3 -.2 1.2" width="0.25" height="0.1" rotation="0 180 0" click-show-window data-file="message4.html"></a-image>
+
+        <!-- 人物 -->
+        <a-image btnhan src="images/txtpic/Man_Han.jpg" position="0 -0.5 -1.8" width="0.6" height="0.2" rotation="0 0 0"></a-image>
+
+    </a-scene>
+</body>
+
+</html>

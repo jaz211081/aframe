@@ -1,0 +1,92 @@
+.info-window {
+  border-radius: 10px;
+  position: absolute;
+  width: ' + this.data.width + 'px;
+  height: ' + this.data.height + 'px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 3px solid rgba(0,0,0,0.65);
+  bottom: 22px;
+  left: 22px;
+  color: rgb(51, 51, 51);
+  padding: 20px 15px 0 15px;
+  font-size: 11pt;
+  line-height: 20pt;
+  z-index: 9999;
+  display: none; /* 初始隐藏 */
+}
+
+.close-button {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  line-height: 12px;
+  border: none;
+  background-color: #ef2d5e;
+  border-radius: 5px;
+  font-weight: medium;
+}
+
+.close-button:hover {
+  background-color: #b32146;
+  color: white;
+}
+
+
+.a-info-message a {
+  border-bottom: 1px solid rgba(53,196,232,.15);
+  color: #1497b8;
+  position: relative;
+  text-decoration: none;
+  transition: .05s ease;
+}
+
+@media only screen and (min-width: 1200px) {
+  .a-info-message {
+    font-size: 12pt;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .a-info-message {
+    left: 20px;
+    right: 20px;
+    bottom: 60px;
+    width: auto;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .a-info-message {
+    left: 20px;
+    bottom: 20px;
+    height: 250px;
+  }
+}
+
+.a-info-message-button {
+  background: rgba(0, 0, 0, 0.35) ' + this.infoMessageButtonDataURI + ' 50% 50% no-repeat;
+  background-size: 92% 90%;
+  border: 0;
+  bottom: 0;
+  cursor: pointer;
+  min-width: 78px;
+  min-height: 34px;
+  padding-right: 0;
+  padding-top: 0;
+  position: absolute;
+  right: 0;
+  transition: background-color .05s ease;
+  -webkit-transition: background-color .05s ease;
+  z-index: 9999;
+  border-radius: 8px;
+  touch-action: manipulation;
+}
+
+.a-info-message-button:active, .a-info-message-button:hover {
+  background-color: #ef2d5e;
+}
