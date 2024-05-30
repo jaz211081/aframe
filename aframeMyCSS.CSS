@@ -36,6 +36,23 @@
   color: white;
 }
 
+.top-left-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  font-size: 12px;
+  background-color: #af9d4c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10000; /* 保证按钮在最上层 */
+}
+
+.top-left-button:hover {
+  background-color: #e0cd76;
+}
 
 .a-info-message a {
   border-bottom: 1px solid rgba(53,196,232,.15);
@@ -89,4 +106,11 @@
 
 .a-info-message-button:active, .a-info-message-button:hover {
   background-color: #ef2d5e;
+}
+
+.responsive-img {
+  max-height: 80vh; /* 80% of viewport height */
+  max-width: 100%;  /* 100% of viewport width */
+  width: auto;
+  height: auto;
 }

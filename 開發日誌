@@ -1,3 +1,6 @@
+2024.05.30
+ 與A-FRAME的Responsive UI結合失敗，內部太多耦合難以切割。改為
+
 2024.05.28
     在aframeButtom.html可以連結到網站後，接下來要更進一步，在當前頁面開啟小視窗。因此開新的檔案 addPanel.html來嘗試與A-FRAME的Responsive UI結合看看
     (https://aframe.io/examples/showcase/responsiveui/)
