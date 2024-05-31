@@ -1,0 +1,21 @@
+2024.05.30
+ 與A-FRAME的Responsive UI結合失敗，內部太多耦合難以切割。改為
+
+2024.05.28
+    在aframeButtom.html可以連結到網站後，接下來要更進一步，在當前頁面開啟小視窗。因此開新的檔案 addPanel.html來嘗試與A-FRAME的Responsive UI結合看看
+    (https://aframe.io/examples/showcase/responsiveui/)
+
+
+2024.05.20 : 
+    aframeButtom.html: 
+        1.可以放置字體，但繁體中文無法呈現，須找個方法來實現。
+        2.需要點選後超連結到網站，已實現。
+        3.物件點擊互動: https://codepen.io/VinZ83F/pen/PoaELVG
+
+
+    aframe.test2: 嘗試在畫面中新增按鈕，但在全螢幕模式會不見。因此想嘗試加入 aframe 元素來當按鈕使用。在此基礎之上新增aframeButtom.html文件。
+    後來發現因為侷限了 div 的視窗大小而導致多一個全螢幕UI遮擋畫面，雖然解決UI遮擋畫面的問題，但仍會持續開發aframe按鈕。畢竟aframe按鈕之存在是往後互動的必需物件。
+
+    
+    vrTest.html為基礎天空盒。在此基礎之上新增aframe.test2.html文件。
+

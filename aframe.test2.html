@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <title>Env</title>
+</head>
+    <style>
+    #changeBackgroundButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10; /* 將按鈕的 z-index 設定為 10，使其位於 `a-sky` 元素之上 */
+        }
+  </style>
+
+<body>
+    <div>
+        <!-- 左上方的按鈕 -->
+        <button id="changeBackgroundButton" style="position: absolute; top: 10px; left: 10px;">回到官網</button>
+    </div>
+    <div >
+        <a-scene>
+            <a-sky 
+                id="sky"
+                src="images/PXL_20240129_004354364.PHOTOSPHERE.jpg">
+            </a-sky>
+
+        </a-scene>    
+    </div>
+    
+    <script>
+        // 獲取按鈕元素
+        var changeBackgroundButton = document.getElementById('changeBackgroundButton');
+
+        // 點擊按鈕時跳轉到 Google 首頁
+        changeBackgroundButton.addEventListener('click', function() {
+            // window.open('https://xinchuang27442943.github.io/CompanyWebPage/', '_blank'); 使用開啟新視窗的方式啟動連結
+            window.location.href = 'https://xinchuang27442943.github.io/CompanyWebPage/';  
+        });
+    </script>
+</body>
+</html>
+
