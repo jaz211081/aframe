@@ -1,8 +1,14 @@
+2024.06.01
+1.發佈上github來host, 手機連線測試沒問題。
+2.開了3個資料夾，CSS、JS、archive，將過往測試與老舊檔案(aframe.test2、aframeButtom、tset、vrTest)放置archive，CSS與JS則放置對應檔案。
+
 2024.05.30
- 與A-FRAME的Responsive UI結合失敗，內部太多耦合難以切割。改為
+ 與A-FRAME的Responsive UI結合失敗，內部太多耦合難以切割。改為與 chatGPT-o 合作開發 addPanel.html。而結果一日千里的順利。
+ 加入資訊視窗、可以更新資訊視窗內資料、超連結、圖片、嵌入youtube影片、sketchfab模型...
+
 
 2024.05.28
-    在aframeButtom.html可以連結到網站後，接下來要更進一步，在當前頁面開啟小視窗。因此開新的檔案 addPanel.html來嘗試與A-FRAME的Responsive UI結合看看
+    在aframeButtom.html可以連結到網站後，接下來要更進一步，在當前頁面開啟資訊視窗。因此開新的檔案 addPanel.html來嘗試與A-FRAME的Responsive UI結合看看
     (https://aframe.io/examples/showcase/responsiveui/)
 
 
