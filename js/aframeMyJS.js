@@ -6,22 +6,6 @@ AFRAME.registerComponent('btngoogle', {
   }
 });
 
-AFRAME.registerComponent('btnxc', {
-  init: function() {
-    this.el.addEventListener('click', function() {
-      window.open('https://xinchuang27442943.github.io/CompanyWebPage/');
-    });
-  }
-});
-
-AFRAME.registerComponent('btnhan', {
-  init: function() {
-    this.el.addEventListener('click', function() {
-      window.open('https://mrhan.mystrikingly.com/');
-    });
-  }
-});
-
 // 小視窗點擊後開啟正確文件
 AFRAME.registerComponent('click-show-window', {
   init: function () {
@@ -69,7 +53,7 @@ function addLinkEventListeners() {
 
 function closeWindow() {
   var infoWindow = document.getElementById('infoWindow');
-  stopAllVideos(infoWindow); // 停止所有视频
+  stopAllVideos(infoWindow); // 停止所有影片
   infoWindow.style.display = 'none';
 }
 
@@ -88,5 +72,25 @@ function stopAllVideos(container) {
 }
 
 function topLeftButtonAction() {
-  alert('Left Top Button Clicked!');
+  var button = document.querySelector('.top-left-button');
+  var filePath = button.getAttribute('data-file');
+  var infoWindowCenter = document.getElementById('infoWindowCenter');
+
+  fetch(filePath) // 使用从按钮获取的文件路径
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('infoContentCenter').innerHTML = data;
+      infoWindowCenter.style.display = 'block';
+      infoWindowCenter.style.top = '50%'; // 将窗口置于屏幕中央
+      infoWindowCenter.style.left = '50%';
+      infoWindowCenter.style.transform = 'translate(-50%, -50%)'; // 将窗口置于屏幕中央
+      addLinkEventListeners();
+    })
+    .catch(error => console.error('Error loading message:', error));
+}
+
+function closeWindowCenter() {
+  var infoWindowCenter = document.getElementById('infoWindowCenter');
+  stopAllVideos(infoWindowCenter);
+  infoWindowCenter.style.display = 'none';
 }

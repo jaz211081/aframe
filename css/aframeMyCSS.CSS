@@ -18,6 +18,27 @@
   display: none; /* 初始隐藏 */
 }
 
+.info-window-center {
+  border-radius: 10px;
+  position: absolute;
+  width: ' + this.data.width + 'px;
+  height: ' + this.data.height + 'px;
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 3px solid rgba(0,0,0,0.65);
+  overflow: auto;
+  color: rgb(51, 51, 51);
+  padding: 20px 15px 0 15px;
+  font-size: 11pt;
+  line-height: 20pt;
+  z-index: 9999;
+  display: none;
+  top: 50%; /* 初始隐藏 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .close-button {
   width: 25px;
   height: 25px;
@@ -43,9 +64,12 @@
   position: absolute;
   top: 10px;
   left: 10px;
+  width: 50px; /* 根据图片大小调整按钮宽度 */
+  height: 50px; /* 根据图片大小调整按钮高度 */
   padding: 10px 20px;
   font-size: 12px;
-  background-color: #af9d4c;
+  background: url('../images/map.jpg') no-repeat center center;
+  background-size: cover;
   color: white;
   border: none;
   border-radius: 5px;
