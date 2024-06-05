@@ -1,11 +1,3 @@
-AFRAME.registerComponent('btngoogle', {
-  init: function() {
-    this.el.addEventListener('click', function() {
-      window.open('https://google.com');
-    });
-  }
-});
-
 // 小視窗點擊後開啟正確文件
 AFRAME.registerComponent('click-show-window', {
   init: function () {
