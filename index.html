@@ -22,11 +22,12 @@
     <a-scene>
         <a-assets>
             <img id="mapIcon" src="images/map.jpg"> <!-- 地图图标 -->
+            <img id="xcCenter" src="images/PXL_20240129_004354364.PHOTOSPHERE.jpg">
             <a-assets-item id="arrow" src="/aframe/model/arrow.glb"></a-assets-item>
         </a-assets>
 
         <!-- 環景圖 -->
-        <a-sky src="images/PXL_20240129_004354364.PHOTOSPHERE.jpg" rotation="0 90 0"></a-sky>
+        <a-sky src="#xcCenter" rotation="0 90 0"></a-sky>
         <a-entity camera look-controls></a-entity> <!-- 固定相機位置，刪除此行相機可以WASD移動 -->
         <a-entity cursor="rayOrigin:mouse"></a-entity>
 
@@ -35,7 +36,7 @@
 
         <!-- 物件 -->
         <a-image src="images/txtpic/xcWeb.png" position="-.75 -.2 -1.4" width="0.35" height="0.4" rotation="0 20 0" click-show-window data-file="xcWeb.html"></a-image>
-        <a-entity gltf-model="#arrow" position="0 -0.6 2" width="0.2" height="0.08" rotation="0 -90 0" onclick="window.location.href='xcEnv2.html'"></a-entity> <!-- 點選3D模型連結至其他地區 -->
+        <!-- <a-entity gltf-model="#arrow" position="0 -0.6 2" width="0.2" height="0.08" rotation="0 -90 0" onclick="window.location.href='xcEnv2.html'"></a-entity> 點選3D模型連結至其他地區 -->
         <a-image src="images/txtpic/gwsave.png" position="1.5 0.09 -0.05" width="0.5" height="0.15" rotation="0 -90 0" click-show-window data-file="gwsave.html"></a-image>
         <a-image src="images/txtpic/BulletinBoard.png" position="0.47 0.04 -0.8" width="0.1" height="0.1" rotation="0 -20 0" click-show-window data-file="BBorad.html"></a-image>   
         <a-image src="images/txtpic/printer.png" position="1 -.02 -1" width="0.17" height="0.17" rotation="0 -60 0"click-show-window data-file="printer.html"></a-image>
