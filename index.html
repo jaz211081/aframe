@@ -32,20 +32,21 @@
         <a-entity cursor="rayOrigin:mouse"></a-entity>
 
         <!-- 物件 -->
-        <a-image src="images/txtpic/xcWeb.png" position="-.6 -.2 -1.4" width="0.35" height="0.4" rotation="0 20 0" click-show-window data-file="xcWeb.html"></a-image>
+        <a-image src="images/txtpic/xcWeb.png" position="-.6 -.2 -1.4" width="0.35" height="0.4" rotation="0 20 0" click-show-window data-file="pages/xcWeb.html"></a-image>
         <a-image src="images/txtpic/aiTools.png" position="-.65 -.2 -.9" width="0.12" height="0.25" rotation="0 40 0" onclick="window.open('https://chatgpt.com/','_blank')"></a-image>
-        <a-image src="images/txtpic/gwsave.png" position="1.5 0.09 -0.05" width="0.5" height="0.15" rotation="0 -90 0" click-show-window data-file="gwsave.html"></a-image>
-        <a-image src="images/txtpic/BulletinBoard.png" position="0.47 0.04 -0.8" width="0.1" height="0.1" rotation="0 -20 0" click-show-window data-file="BBorad.html"></a-image>   
-        <a-image src="images/txtpic/printer.png" position="1 -.02 -1" width="0.17" height="0.17" rotation="0 -60 0"click-show-window data-file="printer.html"></a-image>
-        <a-image src="images/txtpic/Tools.png" position="0.7 -.1 1.5" width="0.18" height="0.18" rotation="0 200 0"click-show-window data-file="tools.html"></a-image>
-        <a-image src="images/txtpic/eat.png" position="-2.5 -0.1 -.6" width="0.4" height="0.4" rotation="0 -90 0" click-show-window data-file="eat.html"></a-image>
+        <a-image src="images/txtpic/gwsave.png" position="1.5 0.09 -0.05" width="0.5" height="0.15" rotation="0 -90 0" click-show-window data-file="pages/items/gwsave.html"></a-image>
+        <a-image src="images/txtpic/BulletinBoard.png" position="0.47 0.04 -0.8" width="0.1" height="0.1" rotation="0 -20 0" click-show-window data-file="pages/items/BBorad.html"></a-image>   
+        <a-image src="images/txtpic/printer.png" position="1 -.02 -1" width="0.17" height="0.17" rotation="0 -60 0"click-show-window data-file="pages/items/printer.html"></a-image>
+        <a-image src="images/txtpic/Tools.png" position="0.7 -.1 1.5" width="0.18" height="0.18" rotation="0 200 0"click-show-window data-file="pages/items/tools.html"></a-image>
+        <a-image src="images/txtpic/eat.png" position="-2.75 -0.2 -.6" width="0.4" height="0.4" rotation="0 -90 0" click-show-window data-file="pages/items/eat.html"></a-image>
+        <a-image src="images/txtpic/drink.png" position="-2.5 -0.16 -1.1" width="0.4" height="0.4" rotation="0 -90 0" click-show-window data-file="pages/items/drink.html"></a-image>
  
         <!-- 組別 -->
-        <a-image src="images/txtpic/Team_Administrative.png" position=".7 0 -.4" width="0.18" height="0.08" rotation="0 -60 0" click-show-window data-file="teamAdministrative.html"></a-image>
-        <a-image src="images/txtpic/Team_Env.png" position=".55 -.1 -.28" width="0.22" height="0.1" rotation="0 -70 0" click-show-window data-file="EnvInfo1.1.html"></a-image>
-        <a-image src="images/txtpic/Team_Design.png" position=".7 -.11 -0.05" width="0.22" height="0.1" rotation="0 -90 0" click-show-window data-file="teamDesign.html"></a-image>
-        <a-image src="images/txtpic/Team_Plan.png" position=".7 -.12 0.2" width="0.22" height="0.1" rotation="0 -90 0"click-show-window data-file="teamPlan.html"></a-image>
-        <a-image src="images/txtpic/Team_ministryWorks.png" position="1.5 -.05 .6" width="0.22" height="0.1" rotation="0 -90 0"click-show-window data-file="teamMinistryWorks.html"></a-image>
+        <a-image src="images/txtpic/Team_Administrative.png" position=".7 0 -.4" width="0.18" height="0.08" rotation="0 -60 0" click-show-window data-file="pages/teams/administrative/teamAdministrative.html"></a-image>
+        <a-image src="images/txtpic/Team_Env.png" position=".55 -.1 -.28" width="0.22" height="0.1" rotation="0 -70 0" click-show-window data-file="pages/teams/env/EnvInfo1.1.html"></a-image>
+        <a-image src="images/txtpic/Team_Design.png" position=".7 -.11 -0.05" width="0.22" height="0.1" rotation="0 -90 0" click-show-window data-file="pages/teams/design/teamDesign.html"></a-image>
+        <a-image src="images/txtpic/Team_Plan.png" position=".7 -.12 0.2" width="0.22" height="0.1" rotation="0 -90 0"click-show-window data-file="pages/teams/plan/teamPlan.html"></a-image>
+        <a-image src="images/txtpic/Team_ministryWorks.png" position="1.5 -.05 .6" width="0.22" height="0.1" rotation="0 -90 0"click-show-window data-file="pages/teams/ministryWorks/teamMinistryWorks.html"></a-image>
 
         <!-- 人物 -->
         <a-image src="images/txtpic/Man_Han.png" position="-1.5 -0.5 0" width="0.6" height="0.2" rotation="0 90 0" onclick="window.open('https://mrhan.mystrikingly.com/','_blank')"></a-image>
@@ -55,7 +56,7 @@
     </a-scene>
 
     <!-- 新增左上角按鈕 按鈕要放在最下面才會顯示在aframe之上-->
-    <button class="top-left-button" onclick="topLeftButtonAction()" data-file="mapIcon.html"></button>
+    <button class="top-left-button" onclick="topLeftButtonAction()" data-file="pages/mapIcon.html"></button>
 </body>
 
 </html>
