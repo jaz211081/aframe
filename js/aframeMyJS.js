@@ -86,3 +86,4 @@ function closeWindowCenter() {
   stopAllVideos(infoWindowCenter);
   infoWindowCenter.style.display = 'none';
 }
+
