@@ -6,18 +6,40 @@ AFRAME.registerComponent('click-show-window', {
       var fileName = el.getAttribute('data-file');
       if (fileName) {
         var infoWindow = document.getElementById('infoWindow');
-        fetch(fileName)
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('infoContent').innerHTML = data; // Use innerHTML to allow HTML tags
-            infoWindow.style.display = 'block';
-            addLinkEventListeners(); // 添加对链接点击事件的监听
-          })
-          .catch(error => console.error('Error loading message:', error));
+        if (fileName.startsWith('https://script.google.com/')) {
+          // 如果是 Google Sheet 的網址，則抓取資料
+          fetchGoogleSheetData(fileName);
+        } else {
+          // 否則，抓取普通文件
+          fetch(fileName)
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('infoContent').innerHTML = data; // Use innerHTML to allow HTML tags
+              infoWindow.style.display = 'block';
+              addLinkEventListeners(); // 添加对链接点击事件的监听
+            })
+            .catch(error => console.error('Error loading message:', error));
+        }
       }
     });
   }
 });
+
+// 新增函數來抓取 Google Sheet 資料
+function fetchGoogleSheetData(sheetUrl) {
+  fetch(sheetUrl)
+    .then(response => response.json())
+    .then(data => {
+      let content = '';
+      data.forEach(row => {
+        content += `<p>${row}</p>`;  // 假設每一列的內容都顯示在 <p> 標籤中
+      });
+      document.getElementById('infoContent').innerHTML = content;
+      document.getElementById('infoWindow').style.display = 'block';
+      addLinkEventListeners(); // 添加链接事件监听
+    })
+    .catch(error => console.error('Error fetching Google Sheet data:', error));
+}
 
 // 小視窗內部資訊更新
 function addLinkEventListeners() {
@@ -86,4 +108,3 @@ function closeWindowCenter() {
   stopAllVideos(infoWindowCenter);
   infoWindowCenter.style.display = 'none';
 }
-

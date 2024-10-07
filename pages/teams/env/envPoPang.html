@@ -1,4 +1,31 @@
-<p>
-    <a href="pages/teams/env/EnvInfo1.1.html" class="internal-link">返回</a>
-</p>
-<p>柏榜頁面</p>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>柏榜頁面</title>
+    <script>
+        // 當頁面加載時，從 Google Sheet 中抓取資料
+        function loadSheetData() {
+            google.script.run.withSuccessHandler(displayData)
+                             .getSheetData('工作表1', 'A4');  // 呼叫 Apps Script 函數，並指定工作表名和儲存格地址
+        }
+
+        // 顯示抓取到的資料
+        function displayData(data) {
+            document.querySelector('.external-info').innerText = data;
+        }
+    </script>
+</head>
+<body onload="loadSheetData()">
+
+    <p>
+        <a href="pages/teams/env/EnvInfo1.1.html" class="internal-link">返回</a>
+    </p>
+
+    <p class="external-info" data-sheet="工作表1" data-range="A4"></p>
+    <!-- 這裡將顯示來自 Google Sheet 的外部資訊 -->
+    
+    <p>柏榜頁面</p>
+
+</body>
+</html>
