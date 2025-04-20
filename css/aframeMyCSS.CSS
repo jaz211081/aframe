@@ -21,7 +21,7 @@
 .info-window-center {
   border-radius: 10px;
   position: absolute;
-  width: ' + this.data.width + 'px;
+  width: 600px;
   height: ' + this.data.height + 'px;
   max-width: 100vw;
   max-height: 100vh;
