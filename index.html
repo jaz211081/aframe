@@ -9,72 +9,51 @@
 </head>
 
 <body>
-    <div class="info-window" id="infoWindow">
-        <button class="close-button" onclick="closeWindow()">X</button>
-        <div id="infoContent">歡迎來玩</div>
-    </div>
+  <button class="top-left-button" data-file="pages/aiDify.html" onclick="topLeftButtonAction()"></button>
 
-    <div class="info-window-center" id="infoWindowCenter">
-        <button class="close-button" onclick="closeWindowCenter()">X</button>
-        <div id="infoContentCenter">信創小天地</div>
-    </div>
+  <div class="info-window" id="infoWindow">
+      <button class="close-button" onclick="closeWindow()">X</button>
+      <div id="infoContent">歡迎來玩</div>
+  </div>
 
-    <a-scene>
-        <a-assets>
-            <img id="mapIcon" src="images/map.jpg"> <!-- 地图图标 -->
-            <img id="xcCenter" src="images/PXL_20240129_004354364.PHOTOSPHERE.jpg">
-            <a-assets-item id="arrow"  src="/aframe/model/arrow.glb"></a-assets-item>
-        </a-assets>
+  <div class="info-window-center" id="infoWindowCenter">
+      <button class="close-button" onclick="closeWindowCenter()">X</button>
+      <div id="infoContentCenter">信創小天地</div>
+  </div>
 
-        <!-- 環景圖 -->
-        <a-sky src="#xcCenter" rotation="0 90 0"></a-sky>
-        <a-entity camera look-controls></a-entity> <!-- 固定相機位置，刪除此行相機可以WASD移動 -->
-        <a-entity cursor="rayOrigin:mouse"></a-entity>
+  <a-scene>
+      <a-assets>
+          <img id="mapIcon" src="images/map.jpg"> <!-- 地图图标 -->
+          <img id="xcCenter" src="images/PXL_20240129_004354364.PHOTOSPHERE.jpg">
+          <a-assets-item id="arrow"  src="/aframe/model/arrow.glb"></a-assets-item>
+      </a-assets>
 
-        <!-- 物件 -->
-        <a-image src="images/txtpic/xcWeb.png" position="-.65 -.17 -1.3" width="0.34" height="0.38" rotation="0 20 0" click-show-window data-file="pages/xcWeb.html"></a-image>
-        <!-- <a-image src="images/txtpic/aiTools.png" position="-.65 -.2 -.9" width="0.12" height="0.25" rotation="0 40 0" onclick="window.open('https://chatgpt.com/','_blank')"></a-image> -->
-        <a-image src="images/txtpic/GoogleMarks/googleLogo.png" position="0.92 0.21 -1" width="0.31" height="0.11" rotation="0 0 0" click-show-window data-file="pages/items/googleSerives.html"></a-image>   
-        <a-image src="images/txtpic/aiTools.png" position="-.7 -.24 -0.95" width="0.22" height="0.25" rotation="0 40 0" click-show-window data-file="pages/items/aiTools.html"></a-image>
-        <a-image src="images/txtpic/gwsave.png" position="1.5 0.09 -0.05" width="0.5" height="0.15" rotation="0 -90 0" click-show-window data-file="pages/items/gwsave.html"></a-image>
-        <a-image src="images/txtpic/BulletinBoard.png" position="0.47 0.04 -0.8" width="0.1" height="0.1" rotation="0 -20 0" click-show-window data-file="pages/items/BBorad.html"></a-image>   
-        <a-image src="images/txtpic/printer.png" position="1 -.02 -1" width="0.17" height="0.17" rotation="0 -60 0"click-show-window data-file="pages/items/printer.html"></a-image>
-        <a-image src="images/txtpic/Tools.png" position="0.7 -.1 1.5" width="0.18" height="0.18" rotation="0 200 0"click-show-window data-file="pages/items/tools.html"></a-image>
-        <a-image src="images/txtpic/eat.png" position="-2.75 -0.2 -.6" width="0.4" height="0.4" rotation="0 -90 0" click-show-window data-file="pages/items/eat.html"></a-image>
-        <a-image src="images/txtpic/drink.png" position="-2.5 -0.16 -1.1" width="0.4" height="0.4" rotation="0 -90 0" click-show-window data-file="pages/items/drink.html"></a-image>
- 
-        <!-- 組別 -->
-        <a-image src="images/txtpic/Team_Administrative.png" position=".7 0 -.4" width="0.18" height="0.08" rotation="0 -60 0" click-show-window data-file="pages/teams/administrative/teamAdministrative.html"></a-image>
-        <a-image src="images/txtpic/Team_Env.png" position=".55 -.1 -.28" width="0.22" height="0.1" rotation="0 -70 0" click-show-window data-file="pages/teams/env/EnvInfo1.1.html"></a-image>
-        <a-image src="images/txtpic/Team_Design.png" position=".7 -.11 -0.05" width="0.22" height="0.1" rotation="0 -90 0" click-show-window data-file="pages/teams/design/teamDesign.html"></a-image>
-        <a-image src="images/txtpic/Team_Plan.png" position=".7 -.12 0.2" width="0.22" height="0.1" rotation="0 -90 0"click-show-window data-file="pages/teams/plan/teamPlan.html"></a-image>
-        <a-image src="images/txtpic/Team_ministryWorks.png" position="1.5 -.05 .6" width="0.22" height="0.1" rotation="0 -90 0"click-show-window data-file="pages/teams/ministryWorks/teamMinistryWorks.html"></a-image>
+      <!-- 環景圖 -->
+      <a-sky src="#xcCenter" rotation="0 90 0"></a-sky>
+      <a-entity camera look-controls></a-entity> <!-- 固定相機位置，刪除此行相機可以WASD移動 -->
+      <a-entity cursor="rayOrigin:mouse"></a-entity>
 
-        <!-- 人物 -->
-        <!-- <a-image src="images/txtpic/Man_Han.png" position="-1.5 -0.5 0" width="0.6" height="0.2" rotation="0 90 0" onclick="window.open('https://mrhan.mystrikingly.com/','_blank')"></a-image> -->
-        <!-- <a-entity gltf-model="#arrow" position="0 -0.6 2" width="0.2" height="0.08" rotation="0 -90 0" onclick="window.location.href='xcEnv2.html'"></a-entity> 點選3D模型連結至其他地區 -->
+      <!-- 物件 -->
+      <a-image src="images/txtpic/xcWeb.png" position="-.65 -.17 -1.3" width="0.34" height="0.38" rotation="0 20 0" click-show-window data-file="pages/xcWeb.html"></a-image>
+      <!-- <a-image src="images/txtpic/aiTools.png" position="-.65 -.2 -.9" width="0.12" height="0.25" rotation="0 40 0" onclick="window.open('https://chatgpt.com/','_blank')"></a-image> -->
+      <a-image src="images/txtpic/GoogleMarks/googleLogo.png" position="0.92 0.21 -1" width="0.31" height="0.11" rotation="0 0 0" click-show-window data-file="pages/items/googleSerives.html"></a-image>   
+      <a-image src="images/txtpic/aiTools.png" position="-.7 -.24 -0.95" width="0.22" height="0.25" rotation="0 40 0" click-show-window data-file="pages/items/aiTools.html"></a-image>
+      <a-image src="images/txtpic/gwsave.png" position="1.5 0.09 -0.05" width="0.5" height="0.15" rotation="0 -90 0" click-show-window data-file="pages/items/gwsave.html"></a-image>
+      <a-image src="images/txtpic/BulletinBoard.png" position="0.47 0.04 -0.8" width="0.1" height="0.1" rotation="0 -20 0" click-show-window data-file="pages/items/BBorad.html"></a-image>   
+      <a-image src="images/txtpic/printer.png" position="1 -.02 -1" width="0.17" height="0.17" rotation="0 -60 0"click-show-window data-file="pages/items/printer.html"></a-image>
+      <a-image src="images/txtpic/Tools.png" position="0.7 -.1 1.5" width="0.18" height="0.18" rotation="0 200 0"click-show-window data-file="pages/items/tools.html"></a-image>
+      <a-image src="images/txtpic/eat.png" position="-2.75 -0.2 -.6" width="0.4" height="0.4" rotation="0 -90 0" click-show-window data-file="pages/items/eat.html"></a-image>
+      <a-image src="images/txtpic/drink.png" position="-2.5 -0.16 -1.1" width="0.4" height="0.4" rotation="0 -90 0" click-show-window data-file="pages/items/drink.html"></a-image>
+
+      <!-- 組別 -->
+      <a-image src="images/txtpic/Team_Administrative.png" position=".7 0 -.4" width="0.18" height="0.08" rotation="0 -60 0" click-show-window data-file="pages/teams/administrative/teamAdministrative.html"></a-image>
+      <a-image src="images/txtpic/Team_Env.png" position=".55 -.1 -.28" width="0.22" height="0.1" rotation="0 -70 0" click-show-window data-file="pages/teams/env/EnvInfo1.1.html"></a-image>
+      <a-image src="images/txtpic/Team_Design.png" position=".7 -.11 -0.05" width="0.22" height="0.1" rotation="0 -90 0" click-show-window data-file="pages/teams/design/teamDesign.html"></a-image>
+      <a-image src="images/txtpic/Team_Plan.png" position=".7 -.12 0.2" width="0.22" height="0.1" rotation="0 -90 0"click-show-window data-file="pages/teams/plan/teamPlan.html"></a-image>
+      <a-image src="images/txtpic/Team_ministryWorks.png" position="1.5 -.05 .6" width="0.22" height="0.1" rotation="0 -90 0"click-show-window data-file="pages/teams/ministryWorks/teamMinistryWorks.html"></a-image>
+
+      <!-- 人物 -->
+      <!-- <a-image src="images/txtpic/Man_Han.png" position="-1.5 -0.5 0" width="0.6" height="0.2" rotation="0 90 0" onclick="window.open('https://mrhan.mystrikingly.com/','_blank')"></a-image> -->
+      <!-- <a-entity gltf-model="#arrow" position="0 -0.6 2" width="0.2" height="0.08" rotation="0 -90 0" onclick="window.location.href='xcEnv2.html'"></a-entity> 點選3D模型連結至其他地區 -->
     </a-scene>
-
-    <script>
-        window.difyChatbotConfig = {
-         token: '2QanssSMIeZUWOjd',
-         systemVariables: {
-           // user_id: 'YOU CAN DEFINE USER ID HERE',
-         },
-        }
-       </script>
-       <script
-        src="https://udify.app/embed.min.js"
-        id="2QanssSMIeZUWOjd"
-        defer>
-       </script>
-       <style>
-         #dify-chatbot-bubble-button {
-           background-color: #1C64F2 !important;
-         }
-         #dify-chatbot-bubble-window {
-           width: 30rem !important;
-           height: 40rem !important;
-         }
-       </style>
 </body>

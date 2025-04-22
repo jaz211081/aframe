@@ -65,11 +65,11 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 50px; /* 根据图片大小调整按钮宽度 */
-  height: 50px; /* 根据图片大小调整按钮高度 */
+  width: 70px; /* 根据图片大小调整按钮宽度 */
+  height: 70px; /* 根据图片大小调整按钮高度 */
   padding: 10px 20px;
   font-size: 12px;
-  background: url('../images/map.jpg') no-repeat center center;
+  background: url('../images/txtpic/xcAi.png') no-repeat center center;
   background-size: cover;
   color: white;
   border: none;
